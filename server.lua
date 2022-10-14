@@ -1,5 +1,5 @@
 Webhooks = {
-    ["ticket"] = "https://discord.com/api/webhooks/1030522880175386695/6aOIVKyx8qCjziWCNWFCPPEkSr8YOQcnmojWS7Y1xnDxm7EKgrhpmVeRry5gUykVte6x"
+    ["ticket"] = ""
 }
 
 local types = {
