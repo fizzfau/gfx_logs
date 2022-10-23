@@ -1,5 +1,8 @@
 Webhooks = {
-    ["ticket"] = ""
+    ["ticket"] = "",
+    ["message"] = "",
+    ["command"] = ""
+
 }
 
 local types = {
@@ -7,6 +10,18 @@ local types = {
         return {
             webhook = GetWebhook("ticket"),
             text = ("#%s - %s: %s"):format(params.id, params.name, params.text),
+        }
+    end,
+    ["message"] = function(params)
+        return {
+            webhook = GetWebhook("message"),
+            text = ("%s"):format(params.text),
+        }
+    end,
+    ["command"] = function(params)
+        return {
+            webhook = GetWebhook("command"),
+            text = ("%s"):format(params.text),
         }
     end,
 }
